@@ -13,6 +13,7 @@
         cytoscape({
             container: container,
             elements: ELEMS,
+            wheelSensitivity: 0.3,
             style: [
                 {
                     selector: "node",
