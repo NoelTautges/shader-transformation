@@ -3772,9 +3772,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shader-transformation@workspace:.":
+"shader-transformatory@workspace:.":
   version: 0.0.0-use.local
-  resolution: "shader-transformation@workspace:."
+  resolution: "shader-transformatory@workspace:."
   dependencies:
     "@rollup/plugin-typescript": ^8.0.0
     "@snowpack/plugin-svelte": ^3.7.0
