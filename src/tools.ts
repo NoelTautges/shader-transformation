@@ -121,7 +121,7 @@ for(const group of LANGS) {
             group: "nodes",
             data: {
                 id: lang.id,
-                name: lang.name,
+                name: `[${group.id[0]}] ` + lang.name,
             },
         });
     }
