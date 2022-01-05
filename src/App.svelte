@@ -28,7 +28,7 @@
 
     <!-- svelte-ignore a11y-unknown-role -->
     <h3 role="doc-subtitle">
-        L = Language, 
+        L = <a href="https://en.wikipedia.org/wiki/Programming_language" target="_blank">Language</a>, 
         B = <a href="https://en.wikipedia.org/wiki/Bytecode" target="_blank">Bytecode</a>, 
         AST = <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank">Abstract Syntax Tree</a>
     </h3>
