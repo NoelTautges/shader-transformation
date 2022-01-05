@@ -4,6 +4,7 @@
     export let name;
     export let bind;
 </script>
+
 <select name={name} bind:value={bind}>
     <option>Select {name}...</option>
     {#each LANGS as group}
