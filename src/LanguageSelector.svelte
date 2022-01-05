@@ -8,7 +8,7 @@
 <select name={name} bind:value={bind}>
     <option>Select {name}...</option>
     {#each LANGS as group}
-        <optgroup label={group.id}>
+        <optgroup label={group.name}>
             {#each group.langs as lang}
                 <option value={lang.id}>
                     {lang.name}

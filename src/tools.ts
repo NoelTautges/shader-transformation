@@ -2,7 +2,8 @@ import { cartesian } from "./utils";
 
 const LANGS = [
     {
-        id: "Languages",
+        id: "languages",
+        name: "Languages",
         langs: [
             { id: "hlsl", name: "HLSL" },
             { id: "glsl", name: "GLSL" },
@@ -12,13 +13,14 @@ const LANGS = [
         ],
     },
     {
-        id: "Bytecode",
+        id: "bytecode",
+        name: "Bytecode",
         langs: [
             { id: "dxbc", name: "DXBC" },
             { id: "dxil", name: "DXIL" },
             { id: "spirv", name: "SPIR-V" },
         ],
-    }
+    },
 ];
 
 const TOOLS = [
@@ -121,8 +123,9 @@ for(const group of LANGS) {
             group: "nodes",
             data: {
                 id: lang.id,
-                name: `[${group.id[0]}] ` + lang.name,
+                name: `[${group.name[0]}] ` + lang.name,
             },
+            classes: [group.id],
         });
     }
 }
@@ -134,6 +137,7 @@ for(const tool of TOOLS) {
                 id: tool.id,
                 name: "[AST] " + tool.name,
             },
+            classes: ["ast"],
         });
         for(const lang of tool.in) {
             ELEMS.push({

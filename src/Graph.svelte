@@ -34,6 +34,25 @@
                         "label": "data(tool)",
                     },
                 },
+                // Color palette thanks to Allie Ofisher at Café Pixo: https://medium.com/cafe-pixo/inclusive-color-palettes-for-the-web-bbfe8cf2410e
+                {
+                    selector: "node.languages",
+                    style: {
+                        "background-color": "#A997DF",
+                    },
+                },
+                {
+                    selector: "node.bytecode",
+                    style: {
+                        "background-color": "#E5323B",
+                    },
+                },
+                {
+                    selector: "node.ast",
+                    style: {
+                        "background-color": "#BDD9BF",
+                    },
+                },
             ],
             layout: {
                 name: "avsdf",
