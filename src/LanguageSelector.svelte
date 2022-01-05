@@ -1,5 +1,5 @@
 <script>
-    import { LANGS, TOOLS } from "./tools.js";
+    import { LANGS } from "./tools.js";
 
     export let name;
     export let bind;
