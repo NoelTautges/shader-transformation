@@ -2,11 +2,11 @@
     import { LANGS } from "./tools.js";
 
     export let name;
-    export let bind;
+    export let value;
 </script>
 
-<select name={name} bind:value={bind}>
-    <option>Select {name}...</option>
+<select name={name} bind:value={value}>
+    <option value="">Select {name}...</option>
     {#each LANGS as group}
         <optgroup label={group.name}>
             {#each group.langs as lang}

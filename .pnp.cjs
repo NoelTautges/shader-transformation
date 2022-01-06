@@ -41,6 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/svelte", "npm:3.0.0"],
             ["@types/node", "npm:17.0.8"],
             ["cytoscape", "npm:3.20.0"],
+            ["cytoscape-all-paths", "virtual:f1d38b2e3a8ce7a8b690a7579525d87c325c77ae44b39f6356700beedb47faf984092125b1e1938473dbe04bf0d246b50de13814885893b3d515eb89d16182f4#npm:0.1.0"],
             ["cytoscape-avsdf", "virtual:f1d38b2e3a8ce7a8b690a7579525d87c325c77ae44b39f6356700beedb47faf984092125b1e1938473dbe04bf0d246b50de13814885893b3d515eb89d16182f4#npm:1.0.0"],
             ["snowpack", "npm:3.8.8"],
             ["svelte", "npm:3.44.3"],
@@ -1474,6 +1475,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cytoscape", "npm:3.20.0"],
             ["heap", "npm:0.2.7"],
             ["lodash.debounce", "npm:4.0.8"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["cytoscape-all-paths", [
+        ["npm:0.1.0", {
+          "packageLocation": "./.yarn/cache/cytoscape-all-paths-npm-0.1.0-b7405caa97-c4a7518d5b.zip/node_modules/cytoscape-all-paths/",
+          "packageDependencies": [
+            ["cytoscape-all-paths", "npm:0.1.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:f1d38b2e3a8ce7a8b690a7579525d87c325c77ae44b39f6356700beedb47faf984092125b1e1938473dbe04bf0d246b50de13814885893b3d515eb89d16182f4#npm:0.1.0", {
+          "packageLocation": "./.yarn/__virtual__/cytoscape-all-paths-virtual-21afdd225b/0/cache/cytoscape-all-paths-npm-0.1.0-b7405caa97-c4a7518d5b.zip/node_modules/cytoscape-all-paths/",
+          "packageDependencies": [
+            ["cytoscape-all-paths", "virtual:f1d38b2e3a8ce7a8b690a7579525d87c325c77ae44b39f6356700beedb47faf984092125b1e1938473dbe04bf0d246b50de13814885893b3d515eb89d16182f4#npm:0.1.0"],
+            ["@types/cytoscape", null],
+            ["cytoscape", "npm:3.20.0"]
+          ],
+          "packagePeers": [
+            "@types/cytoscape",
+            "cytoscape"
           ],
           "linkType": "HARD",
         }]
@@ -4554,6 +4577,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/svelte", "npm:3.0.0"],
             ["@types/node", "npm:17.0.8"],
             ["cytoscape", "npm:3.20.0"],
+            ["cytoscape-all-paths", "virtual:f1d38b2e3a8ce7a8b690a7579525d87c325c77ae44b39f6356700beedb47faf984092125b1e1938473dbe04bf0d246b50de13814885893b3d515eb89d16182f4#npm:0.1.0"],
             ["cytoscape-avsdf", "virtual:f1d38b2e3a8ce7a8b690a7579525d87c325c77ae44b39f6356700beedb47faf984092125b1e1938473dbe04bf0d246b50de13814885893b3d515eb89d16182f4#npm:1.0.0"],
             ["snowpack", "npm:3.8.8"],
             ["svelte", "npm:3.44.3"],

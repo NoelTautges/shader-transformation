@@ -1,16 +1,22 @@
 <script lang="ts">
     import cytoscape from "cytoscape";
+    import cytoscapeAllPaths from "cytoscape-all-paths";
     import avsdf from "cytoscape-avsdf";
     import { onMount } from "svelte";
 
     import { ELEMS } from "./tools.js";
 
-    let container;
+    export let source;
+    export let target;
 
+    let container;
+    let cy;
+
+    cytoscape.use(cytoscapeAllPaths);
     cytoscape.use(avsdf);
 
     onMount(() => {
-        cytoscape({
+        cy = cytoscape({
             container: container,
             elements: ELEMS,
             wheelSensitivity: 0.3,
@@ -54,6 +60,12 @@
                         "background-color": "#BDD9BF",
                     },
                 },
+                {
+                    selector: "node.hidden",
+                    style: {
+                        "display": "none",
+                    },
+                },
             ],
             layout: {
                 name: "avsdf",
@@ -61,6 +73,36 @@
             },
         });
     });
+
+    $: if(cy) {
+        if(source && target) {
+            let necessaryElems = new Set(
+                cy
+                    .elements()
+                    .cytoscapeAllPaths({rootIds: [source]})
+                    .map(path => path.map(e => e.data("id")))
+                    .map(path => {
+                        let i = path.indexOf(target);
+                        return i != -1 ? path.slice(0, i + 1) : [];
+                    })
+                    .filter(path => path.length <= 7)
+                    .flat()
+            );
+            cy.elements().forEach(e => {
+                if(necessaryElems.has(e.data("id"))) {
+                    if(e.hasClass("hidden")) {
+                        e.removeClass("hidden");
+                    }
+                } else {
+                    if(!e.hasClass("hidden")) {
+                        e.addClass("hidden");
+                    }
+                }
+            });
+        } else {
+            cy.elements().forEach(e => e.removeClass("hidden"));
+        }
+    }
 </script>
 
 <style>

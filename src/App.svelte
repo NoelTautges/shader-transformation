@@ -19,10 +19,10 @@
 
 <div id="centered">
     <label for="source">Source</label>
-    <LanguageSelector name="source" bind={source} />
+    <LanguageSelector name="source" bind:value={source} />
     &nbsp; &nbsp; &nbsp;
     <label for="target">Target</label>
-    <LanguageSelector name="target" bind={target} />
+    <LanguageSelector name="target" bind:value={target} />
 
     <br>
 
@@ -34,4 +34,4 @@
     </h3>
 </div>
 
-<Graph />
+<Graph bind:source={source} bind:target={target} />
