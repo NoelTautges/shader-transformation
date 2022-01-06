@@ -205,7 +205,7 @@ for(const tool of TOOLS) {
             ELEMS.push({
                 group: "edges",
                 data: {
-                    id: inOut[0] + "-" + inOut[1],
+                    id: inOut[0] + "-" + tool.id + "-" + inOut[1],
                     source: inOut[0],
                     target: inOut[1],
                     tool: tool.name,
