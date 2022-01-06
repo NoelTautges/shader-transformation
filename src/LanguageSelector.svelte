@@ -2,7 +2,7 @@
     import { LANGS } from "./tools.js";
 
     export let name;
-    export let value;
+    export let value = "";
 </script>
 
 <select name={name} bind:value={value}>

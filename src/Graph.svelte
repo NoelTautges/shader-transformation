@@ -6,8 +6,8 @@
 
     import { ELEMS } from "./tools.js";
 
-    export let source;
-    export let target;
+    export let source = "";
+    export let target = "";
 
     let container;
     let cy;
