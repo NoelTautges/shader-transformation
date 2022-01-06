@@ -114,6 +114,46 @@ const TOOLS = [
         ast: false,
         links: ["https://github.com/microsoft/DirectXShaderCompiler/tree/master/projects/dxilconv"],
     },
+    {
+        id: "hlslparser",
+        name: "HLSLParser",
+        in: ["hlsl"],
+        out: ["msl", "glsl"],
+        ast: false,
+        links: [
+            "https://github.com/Thekla/hlslparser",
+            "https://github.com/zz85/hlslparser",
+        ],
+    },
+    {
+        id: "hlsl2glslconverter",
+        name: "HLSL2GLSLConverter",
+        in: ["hlsl"],
+        out: ["glsl"],
+        ast: false,
+        links: ["http://diligentgraphics.com/diligent-engine/shader-converter/standalone-converter/"],
+    },
+    /*
+    {
+        id: "shaderconductor",
+        name: "ShaderConductor",
+        in: ["hlsl"],
+        out: ["glsl", "glsl_es", "msl"],
+        ast: false,
+        links: ["https://github.com/microsoft/ShaderConductor"],
+        uses: ["dxc", "spirv_cross"],
+    },
+    {
+        id: "glslcc",
+        name: "glslcc",
+        in: ["glsl"],
+        out: ["hlsl", "glsl_es", "msl"],
+        // TODO: AST relationship with composition tools
+        ast: false,
+        links: ["https://github.com/septag/glslcc"],
+        uses: ["glslang", "spirv_cross"],
+    },
+    */
 ];
 
 let ELEMS = [];
@@ -174,6 +214,5 @@ for(const tool of TOOLS) {
         }
     }
 }
-
 
 export { LANGS, TOOLS, ELEMS };
